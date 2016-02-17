@@ -8,7 +8,7 @@ $(function() {
     window.SwaggerTranslator.translate();
   }
 
-  var lsKey = 'swagger_accessToken';
+  var lsKey = 'swagger_accessToken_' + window.location.pathname.replace('/', '_');
   $.getJSON('config.json', function(config) {
     log(config);
     loadSwaggerUi(config);
@@ -116,5 +116,3 @@ $(function() {
     }
   }
 });
-
-
